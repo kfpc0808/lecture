@@ -92,28 +92,28 @@
 <body style="background-color: #f9fafb; color: #111827;">
 
     <!-- 참석자 버튼 (Floating) -->
-    <button onclick="openAdminLogin()" style="position: fixed; top: 12px; right: 8px; z-index: 50; display: flex; align-items: center; justify-content: center; padding: 10px; background: rgba(30, 58, 138, 0.9); color: white; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15); min-height: 40px; width: 40px; height: 40px;">
+    <button type="button" onclick="openAdminLogin()" style="position: fixed; top: 12px; right: 8px; z-index: 50; display: flex; align-items: center; justify-content: center; padding: 10px; background: rgba(30, 58, 138, 0.9); color: white; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15); min-height: 40px; width: 40px; height: 40px; cursor: pointer; -webkit-appearance: none; -webkit-tap-highlight-color: transparent;">
         <svg style="width: 18px; height: 18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
     </button>
 
     <!-- 관리자 로그인 모달 -->
     <div id="adminModal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 100; align-items: center; justify-content: center; padding: 16px;">
         <div style="background: white; border-radius: 16px; box-shadow: 0 25px 50px rgba(0,0,0,0.25); width: 100%; max-width: 360px; padding: 24px; position: relative;">
-            <button onclick="closeAdminLogin()" style="position: absolute; top: 16px; right: 16px; color: #9ca3af; background: none; border: none; min-height: auto; padding: 4px;">
+            <button type="button" onclick="closeAdminLogin()" style="position: absolute; top: 16px; right: 16px; color: #9ca3af; background: none; border: none; min-height: auto; padding: 4px; cursor: pointer; -webkit-tap-highlight-color: transparent;">
                 <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             <h3 style="font-size: 20px; font-weight: 700; color: #111827; margin-bottom: 24px; text-align: center;">관리자 로그인</h3>
             <div id="loginForm">
                 <div style="margin-bottom: 16px;">
                     <label style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 4px;">아이디</label>
-                    <input type="text" id="adminId" style="width: 100%; padding: 12px 16px; border: 1px solid #d1d5db; border-radius: 12px; font-size: 16px; outline: none;" placeholder="아이디 입력">
+                    <input type="text" id="adminId" style="width: 100%; padding: 12px 16px; border: 1px solid #d1d5db; border-radius: 12px; font-size: 16px; outline: none; -webkit-appearance: none;" placeholder="아이디 입력">
                 </div>
                 <div style="margin-bottom: 16px;">
                     <label style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 4px;">비밀번호</label>
-                    <input type="password" id="adminPw" style="width: 100%; padding: 12px 16px; border: 1px solid #d1d5db; border-radius: 12px; font-size: 16px; outline: none;" placeholder="비밀번호 입력">
+                    <input type="password" id="adminPw" style="width: 100%; padding: 12px 16px; border: 1px solid #d1d5db; border-radius: 12px; font-size: 16px; outline: none; -webkit-appearance: none;" placeholder="비밀번호 입력">
                 </div>
                 <p id="loginError" style="display: none; color: #ef4444; font-size: 14px; margin-top: 8px;">아이디 또는 비밀번호가 올바르지 않습니다.</p>
-                <button onclick="checkAdminLogin()" style="width: 100%; margin-top: 24px; background: #1e3a8a; color: white; font-weight: 700; padding: 14px 24px; border-radius: 12px; border: none; font-size: 16px;">
+                <button type="button" onclick="checkAdminLogin()" style="width: 100%; margin-top: 24px; background: #1e3a8a; color: white; font-weight: 700; padding: 14px 24px; border-radius: 12px; border: none; font-size: 16px; cursor: pointer; -webkit-appearance: none; -webkit-tap-highlight-color: transparent;">
                     로그인
                 </button>
             </div>
@@ -175,7 +175,7 @@
                 
                 <!-- 신청 버튼 -->
                 <div id="applyBtnWrap">
-                    <button onclick="toggleApplyForm()" style="width: 100%; max-width: 320px; background: #eab308; color: #111827; font-weight: 700; padding: 16px 24px; border-radius: 9999px; border: none; font-size: 16px; box-shadow: 0 4px 12px rgba(234,179,8,0.4); display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                    <button type="button" onclick="toggleApplyForm()" style="width: 100%; max-width: 320px; background: #eab308; color: #111827; font-weight: 700; padding: 16px 24px; border-radius: 9999px; border: none; font-size: 16px; box-shadow: 0 4px 12px rgba(234,179,8,0.4); display: inline-flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; -webkit-appearance: none; -webkit-tap-highlight-color: transparent;">
                         <span>줌세션 신청하기</span>
                         <svg id="applyArrow" style="width: 20px; height: 20px; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
@@ -188,19 +188,19 @@
                     <!-- 성명 -->
                     <div style="margin-bottom: 16px;">
                         <label style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 4px;">성명 <span style="color: #ef4444;">*</span></label>
-                        <input type="text" id="formName" style="width: 100%; padding: 14px 16px; border: 1px solid #d1d5db; border-radius: 12px; font-size: 16px; color: #111827; outline: none;" placeholder="성명을 입력하세요">
+                        <input type="text" id="formName" style="width: 100%; padding: 14px 16px; border: 1px solid #d1d5db; border-radius: 12px; font-size: 16px; color: #111827; outline: none; -webkit-appearance: none;" placeholder="성명을 입력하세요">
                     </div>
                     
                     <!-- 소속사 -->
                     <div style="margin-bottom: 16px;">
                         <label style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 4px;">소속사 <span style="color: #ef4444;">*</span></label>
-                        <input type="text" id="formCompany" style="width: 100%; padding: 14px 16px; border: 1px solid #d1d5db; border-radius: 12px; font-size: 16px; color: #111827; outline: none;" placeholder="소속사를 입력하세요">
+                        <input type="text" id="formCompany" style="width: 100%; padding: 14px 16px; border: 1px solid #d1d5db; border-radius: 12px; font-size: 16px; color: #111827; outline: none; -webkit-appearance: none;" placeholder="소속사를 입력하세요">
                     </div>
                     
                     <!-- 직함 -->
                     <div style="margin-bottom: 16px;">
                         <label style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 4px;">직함 <span style="color: #ef4444;">*</span></label>
-                        <input type="text" id="formTitle" style="width: 100%; padding: 14px 16px; border: 1px solid #d1d5db; border-radius: 12px; font-size: 16px; color: #111827; outline: none;" placeholder="직함을 입력하세요">
+                        <input type="text" id="formTitle" style="width: 100%; padding: 14px 16px; border: 1px solid #d1d5db; border-radius: 12px; font-size: 16px; color: #111827; outline: none; -webkit-appearance: none;" placeholder="직함을 입력하세요">
                     </div>
                     
                     <!-- 연락처 -->
@@ -208,20 +208,20 @@
                         <label style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 4px;">연락처 <span style="color: #ef4444;">*</span></label>
                         <div style="display: flex; align-items: center; gap: 4px; width: 100%;">
                             <span style="padding: 12px 8px; background: #f3f4f6; color: #374151; border-radius: 10px; font-weight: 500; font-size: 14px; flex-shrink: 0;">010</span>
-                            <input type="tel" id="formPhone1" inputmode="numeric" pattern="[0-9]*" maxlength="4" style="width: 70px; min-width: 0; flex: 1; padding: 12px 8px; border: 1px solid #d1d5db; border-radius: 10px; font-size: 16px; color: #111827; text-align: center; outline: none;" placeholder="0000">
+                            <input type="tel" id="formPhone1" pattern="\d*" maxlength="4" style="width: 70px; min-width: 0; flex: 1; padding: 12px 8px; border: 1px solid #d1d5db; border-radius: 10px; font-size: 16px; color: #111827; text-align: center; outline: none; -webkit-appearance: none;" placeholder="0000">
                             <span style="color: #9ca3af; flex-shrink: 0;">-</span>
-                            <input type="tel" id="formPhone2" inputmode="numeric" pattern="[0-9]*" maxlength="4" style="width: 70px; min-width: 0; flex: 1; padding: 12px 8px; border: 1px solid #d1d5db; border-radius: 10px; font-size: 16px; color: #111827; text-align: center; outline: none;" placeholder="0000">
+                            <input type="tel" id="formPhone2" pattern="\d*" maxlength="4" style="width: 70px; min-width: 0; flex: 1; padding: 12px 8px; border: 1px solid #d1d5db; border-radius: 10px; font-size: 16px; color: #111827; text-align: center; outline: none; -webkit-appearance: none;" placeholder="0000">
                         </div>
                     </div>
                     
                     <!-- 추천인 -->
                     <div style="margin-bottom: 20px;">
                         <label style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 4px;">추천인</label>
-                        <input type="text" id="formRecommender" style="width: 100%; padding: 14px 16px; border: 1px solid #d1d5db; border-radius: 12px; font-size: 16px; color: #111827; outline: none;" placeholder="추천인 (선택)">
+                        <input type="text" id="formRecommender" style="width: 100%; padding: 14px 16px; border: 1px solid #d1d5db; border-radius: 12px; font-size: 16px; color: #111827; outline: none; -webkit-appearance: none;" placeholder="추천인 (선택)">
                     </div>
                     
                     <!-- 제출 버튼 -->
-                    <button onclick="submitForm(this)" style="width: 100%; background: #eab308; color: #111827; font-weight: 700; padding: 16px 24px; border-radius: 12px; border: none; font-size: 16px; box-shadow: 0 2px 8px rgba(234,179,8,0.3);">
+                    <button type="button" onclick="submitForm(this)" style="width: 100%; background: #eab308; color: #111827; font-weight: 700; padding: 16px 24px; border-radius: 12px; border: none; font-size: 16px; box-shadow: 0 2px 8px rgba(234,179,8,0.3); cursor: pointer; -webkit-appearance: none; -webkit-tap-highlight-color: transparent;">
                         제출하기
                     </button>
                 </div>
@@ -244,7 +244,7 @@
         <!-- AI시대 미래 고민 버튼 (아코디언) -->
         <!-- ============================================ -->
         <div style="margin-top: 32px; text-align: center;">
-            <button onclick="toggleOfflineSection()" style="width: 100%; max-width: 400px; background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); color: white; font-weight: 700; padding: 18px 24px; border-radius: 16px; border: none; font-size: 16px; box-shadow: 0 4px 20px rgba(124,58,237,0.4); display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
+            <button type="button" onclick="toggleOfflineSection()" style="width: 100%; max-width: 400px; background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); color: white; font-weight: 700; padding: 18px 24px; border-radius: 16px; border: none; font-size: 16px; box-shadow: 0 4px 20px rgba(124,58,237,0.4); display: inline-flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; -webkit-appearance: none; -webkit-tap-highlight-color: transparent;">
                 <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                 <span>AI시대에<br>미래를 고민하고 있다면</span>
                 <svg id="offlineArrow" style="width: 20px; height: 20px; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
